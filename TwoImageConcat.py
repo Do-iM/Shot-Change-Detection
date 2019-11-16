@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-def make_model(keras):
+keras = None
+shot_change_types = ["Non", "Cut", "Dissolve", "Fade"]
+
+def make_model():
     vgg16_model = keras.applications.vgg16.VGG16(include_top=False, weights='imagenet', input_shape=(224, 224, 3))
     #vgg16_model.summary()
     vgg16_model.trainable = False
@@ -16,8 +19,8 @@ def make_model(keras):
     
     return model
 
-def load_model(keras, filename):
-    model = make_model(keras)
+def load_model(filename):
+    model = make_model()
     model.load_weights(filename)
     return model
 
@@ -29,7 +32,7 @@ def compile_model(model):
                   loss='sparse_categorical_crossentropy',
                   metrics=['accuracy'])
     
-def get_data_gen(keras, batch_size):
+def get_data_gen(batch_size):
     train_image_generator = keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
     valid_image_generator = keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
     train_data_gen = train_image_generator.flow_from_directory(batch_size=batch_size,
@@ -68,18 +71,19 @@ def view_history(history):
     plt.title('Training and Validation Loss')
     plt.show()
 
-def train_model(model, batch_size = 16, train_steps = 100, valid_steps = 25, epochs = 10):
+def train_model(model, batch_size = 16, train_steps = 100, valid_steps = 25, epochs = 10, view=False):
     class_names = ['Non', 'Cut', 'Dissolve', 'Fade']
     (train_data_gen, valid_data_gen) = get_data_gen(batch_size)
     history = model.fit_generator(
         train_data_gen,
         steps_per_epoch=train_steps,
         epochs=epochs,
-        validation_data=valid_data_gen,
-        validation_steps=valid_steps
+        validation_data=valid_data_gen if valid_steps > 0 else None,
+        validation_steps=valid_steps if valid_steps > 0 else None
     )
-    view_history(history)
-    return history
+    if view:
+        view_history(history)
+    return
 
 def check_validation(model, data_gen):
     import numpy as np
@@ -95,6 +99,43 @@ def check_validation(model, data_gen):
     for i in range(a_test.size):
         x = int(a_test[i])
         y = int(a_pred[i])
-        a[x,y] = a[x,y] + 1
+        a[x,y] += 1
     print(a)
+    
+def frame_to_input(frame_dir, input_dir):
+    import os
+    os.mkdir(input_dir)
+    
+    frames = os.listdir(frame_dir)
+    
+    from PIL import Image
+    import Generator
+    
+    for i in range(len(frames) - 1):
+        img1 = Image.open(os.path.join(frame_dir, frames[i]))
+        img1.resize((224, 224))
+        img2 = Image.open(os.path.join(frame_dir, frames[i + 1]))
+        img2.resize((224, 224))
+        img = Generator.concat2image(img1, img2)
+        img.save(os.path.join(input_dir, frames[i]))
 
+def detection(model, test_dir, threshold = 0.1):
+    import os
+    import numpy as np
+    tests = os.listdir(test_dir)
+    total = [0, 0, 0, 0]
+    for test in tests:
+        img = keras.preprocessing.image.load_img(os.path.join(test_dir, test))
+        arr = keras.preprocessing.image.img_to_array(img) / 255.
+        pred = model.predict(np.expand_dims(arr, axis=0))[0]
+        max_index = np.argmax(pred)
+        total[max_index] += 1
+        
+        change_type = shot_change_types[max_index]
+        info = test + ":"
+        for i in range(4):
+            if pred[i] > threshold:
+                info += " " + shot_change_types[i] + "=" + str(int(pred[i] * 100))
+        print(info)
+        
+    print(total)
