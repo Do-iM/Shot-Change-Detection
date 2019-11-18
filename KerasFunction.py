@@ -1,23 +1,15 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+import os
+import numpy as np
+
 keras = None
+gen_f = None
 shot_change_types = ["Non", "Cut", "Dissolve", "Fade"]
 
 def make_model():
-    vgg16_model = keras.applications.vgg16.VGG16(include_top=False, weights='imagenet', input_shape=(224, 224, 3))
-    #vgg16_model.summary()
-    vgg16_model.trainable = False
-
-    model = keras.models.Sequential()
-    model.add(vgg16_model)
-    model.add(keras.layers.Flatten())
-    model.add(keras.layers.Dense(4096, activation='relu'))
-    model.add(keras.layers.Dense(1024, activation='relu'))
-    model.add(keras.layers.Dense(4, activation='softmax'))
-    #model.summary()
-    
-    return model
+    return gen_f.vgg.make_model()
 
 def load_model(filename):
     model = make_model()
@@ -33,18 +25,7 @@ def compile_model(model):
                   metrics=['accuracy'])
     
 def get_data_gen(batch_size):
-    train_image_generator = keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
-    valid_image_generator = keras.preprocessing.image.ImageDataGenerator(rescale=1./255)
-    train_data_gen = train_image_generator.flow_from_directory(batch_size=batch_size,
-                                                               directory='train',
-                                                               shuffle=True,
-                                                               target_size=(224, 224),
-                                                               class_mode='binary')
-    valid_data_gen = valid_image_generator.flow_from_directory(batch_size=batch_size,
-                                                               directory='valid',
-                                                               target_size=(224, 224),
-                                                               class_mode='binary')
-    return (train_data_gen, valid_data_gen)
+    return (gen_f.vgg.generator("train", batch_size), gen_f.vgg.generator("valid", batch_size))
 
 def view_history(history):
     import matplotlib.pyplot as plt
@@ -72,7 +53,6 @@ def view_history(history):
     plt.show()
 
 def train_model(model, batch_size = 16, train_steps = 100, valid_steps = 25, epochs = 10, view=False):
-    class_names = ['Non', 'Cut', 'Dissolve', 'Fade']
     (train_data_gen, valid_data_gen) = get_data_gen(batch_size)
     history = model.fit_generator(
         train_data_gen,
@@ -86,11 +66,10 @@ def train_model(model, batch_size = 16, train_steps = 100, valid_steps = 25, epo
     return
 
 def check_validation(model, data_gen):
-    import numpy as np
-
-    random_valid = data_gen.next()
+    random_valid = next(data_gen)
     a_test = random_valid[1]
-    a_pred = model.predict_classes(random_valid[0])
+    a_pred = model.predict(random_valid[0])
+    a_pred = list(map(np.argmax, a_pred))
     
     from sklearn.metrics import classification_report
     print(classification_report(a_test, a_pred))
@@ -101,33 +80,16 @@ def check_validation(model, data_gen):
         y = int(a_pred[i])
         a[x,y] += 1
     print(a)
-    
-def frame_to_input(frame_dir, input_dir):
-    import os
-    os.mkdir(input_dir)
-    
-    frames = os.listdir(frame_dir)
-    
-    from PIL import Image
-    import Generator
-    
-    for i in range(len(frames) - 1):
-        img1 = Image.open(os.path.join(frame_dir, frames[i]))
-        img1.resize((224, 224))
-        img2 = Image.open(os.path.join(frame_dir, frames[i + 1]))
-        img2.resize((224, 224))
-        img = Generator.concat2image(img1, img2)
-        img.save(os.path.join(input_dir, frames[i]))
 
 def detection(model, test_dir, threshold = 0.1):
-    import os
-    import numpy as np
     tests = os.listdir(test_dir)
     total = [0, 0, 0, 0]
     for test in tests:
         img = keras.preprocessing.image.load_img(os.path.join(test_dir, test))
-        arr = keras.preprocessing.image.img_to_array(img) / 255.
-        pred = model.predict(np.expand_dims(arr, axis=0))[0]
+        arr = keras.preprocessing.image.img_to_array(img) / 255
+        arr = np.expand_dims(arr, axis=0)
+        arr = gen_f.vgg.image_array_to_input(arr)
+        pred = model.predict(arr)[0]
         max_index = np.argmax(pred)
         total[max_index] += 1
         
