@@ -1,0 +1,149 @@
+mix2 / 16 - 50 - 10
+Found 800 images belonging to 4 classes.
+Found 200 images belonging to 4 classes.
+Epoch 1/2
+50/50 [==============================] - 90s 2s/step - loss: 4.3221 - acc: 0.4650 - val_loss: 0.6550 - val_acc: 0.7250
+Epoch 2/2
+50/50 [==============================] - 83s 2s/step - loss: 0.5082 - acc: 0.8150 - val_loss: 0.5986 - val_acc: 0.7434
+              precision    recall  f1-score   support
+
+         0.0       0.77      0.63      0.69        27
+         1.0       0.87      0.90      0.88        29
+         2.0       0.67      0.67      0.67        21
+         3.0       0.67      0.78      0.72        23
+
+    accuracy                           0.75       100
+   macro avg       0.74      0.74      0.74       100
+weighted avg       0.75      0.75      0.75       100
+
+[[17  3  3  4]
+ [ 3 26  0  0]
+ [ 2  0 14  5]
+ [ 0  1  4 18]]
+
+mix4 / 16 - 50 - 10
+Found 800 images belonging to 4 classes.
+Found 200 images belonging to 4 classes.
+Epoch 1/2
+50/50 [==============================] - 77s 2s/step - loss: 4.1578 - acc: 0.5287 - val_loss: 0.5809 - val_acc: 0.7562
+Epoch 2/2
+50/50 [==============================] - 76s 2s/step - loss: 0.4678 - acc: 0.8113 - val_loss: 0.4217 - val_acc: 0.8421
+              precision    recall  f1-score   support
+
+         0.0       0.75      0.96      0.84        25
+         1.0       0.96      0.89      0.92        27
+         2.0       0.90      0.79      0.84        24
+         3.0       1.00      0.92      0.96        24
+
+    accuracy                           0.89       100
+   macro avg       0.90      0.89      0.89       100
+weighted avg       0.90      0.89      0.89       100
+
+[[24  1  0  0]
+ [ 3 24  0  0]
+ [ 5  0 19  0]
+ [ 0  0  2 22]]
+
+concat2 / 16 - 50 - 10
+Found 200 images belonging to 4 classes.
+Found 800 images belonging to 4 classes.
+Epoch 1/2
+50/50 [==============================] - 175s 3s/step - loss: 6.8202 - acc: 0.3900 - val_loss: 0.9257 - val_acc: 0.5687
+Epoch 2/2
+50/50 [==============================] - 166s 3s/step - loss: 0.8176 - acc: 0.6863 - val_loss: 0.9131 - val_acc: 0.5921
+Found 200 images belonging to 4 classes.
+              precision    recall  f1-score   support
+
+         0.0       0.47      0.79      0.59        28
+         1.0       0.40      0.09      0.14        23
+         2.0       1.00      0.80      0.89        25
+         3.0       0.82      0.96      0.88        24
+
+    accuracy                           0.67       100
+   macro avg       0.67      0.66      0.63       100
+weighted avg       0.67      0.67      0.63       100
+
+[[22  3  0  3]
+ [21  2  0  0]
+ [ 3  0 20  2]
+ [ 1  0  0 23]]
+
+Found 200 images belonging to 4 classes.
+Found 800 images belonging to 4 classes.
+Epoch 1/2
+50/50 [==============================] - 160s 3s/step - loss: 7.5060 - acc: 0.3875 - val_loss: 0.7995 - val_acc: 0.6062
+Epoch 2/2
+50/50 [==============================] - 158s 3s/step - loss: 0.8266 - acc: 0.6675 - val_loss: 1.4863 - val_acc: 0.5724
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.04      0.07        27
+         1.0       0.32      1.00      0.49        19
+         2.0       0.76      0.76      0.76        25
+         3.0       1.00      0.52      0.68        29
+
+    accuracy                           0.54       100
+   macro avg       0.77      0.58      0.50       100
+weighted avg       0.81      0.54      0.50       100
+
+[[ 1 26  0  0]
+ [ 0 19  0  0]
+ [ 0  6 19  0]
+ [ 0  8  6 15]]
+
+concat2_multiply / 16 - 50 - 10
+Epoch 1/5
+Found 200 images belonging to 4 classes.
+Found 800 images belonging to 4 classes.
+50/50 [==============================] - 102s 2s/step - loss: 11.9358 - acc: 0.4562 - val_loss: 0.5805 - val_acc: 0.7500
+Epoch 2/5
+50/50 [==============================] - 102s 2s/step - loss: 0.6096 - acc: 0.7925 - val_loss: 0.3570 - val_acc: 0.8618
+Epoch 3/5
+50/50 [==============================] - 102s 2s/step - loss: 0.2752 - acc: 0.8962 - val_loss: 0.2609 - val_acc: 0.9079
+Epoch 4/5
+50/50 [==============================] - 101s 2s/step - loss: 0.2261 - acc: 0.9150 - val_loss: 0.2577 - val_acc: 0.9211
+Epoch 5/5
+50/50 [==============================] - 102s 2s/step - loss: 0.2263 - acc: 0.9188 - val_loss: 0.2167 - val_acc: 0.9313
+              precision    recall  f1-score   support
+
+         0.0       1.00      0.94      0.97        50
+         1.0       1.00      0.92      0.96        50
+         2.0       0.95      0.84      0.89        50
+         3.0       0.79      1.00      0.88        50
+
+    accuracy                           0.93       200
+   macro avg       0.94      0.92      0.93       200
+weighted avg       0.94      0.93      0.93       200
+
+[[47  0  1  2]
+ [ 0 46  1  3]
+ [ 0  0 42  8]
+ [ 0  0  0 50]]
+
+mix4 / 16 - 50 - 10
+Found 800 images belonging to 4 classes.
+Found 200 images belonging to 4 classes.
+Epoch 1/5
+50/50 [==============================] - 90s 2s/step - loss: 3.9405 - acc: 0.5125 - val_loss: 0.5551 - val_acc: 0.7812
+Epoch 2/5
+50/50 [==============================] - 83s 2s/step - loss: 0.3713 - acc: 0.8438 - val_loss: 0.4637 - val_acc: 0.8421
+Epoch 3/5
+50/50 [==============================] - 76s 2s/step - loss: 0.1571 - acc: 0.9437 - val_loss: 1.0083 - val_acc: 0.6842
+Epoch 4/5
+50/50 [==============================] - 76s 2s/step - loss: 0.1603 - acc: 0.9450 - val_loss: 0.4934 - val_acc: 0.8355
+Epoch 5/5
+50/50 [==============================] - 76s 2s/step - loss: 0.0918 - acc: 0.9725 - val_loss: 0.6298 - val_acc: 0.8187
+              precision    recall  f1-score   support
+
+         0.0       0.71      0.90      0.80        50
+         1.0       0.95      0.80      0.87        50
+         2.0       0.88      0.74      0.80        50
+         3.0       0.89      0.94      0.91        50
+
+    accuracy                           0.84       200
+   macro avg       0.86      0.85      0.85       200
+weighted avg       0.86      0.84      0.85       200
+
+[[45  2  1  2]
+ [ 9 40  1  0]
+ [ 9  0 37  4]
+ [ 0  0  3 47]]
