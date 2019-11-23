@@ -59,7 +59,8 @@ class DoubleVGG:
         bi = vgg16_b.input
         a = vgg16_a(ai)
         b = vgg16_b(bi)
-        x = keras.layers.Subtract()([a, b])
+        x = keras.layers.Multiply()([a, b])
+        x = keras.layers.MaxPooling2D(pool_size=(7, 7))(x)
         x = keras.layers.Flatten()(x)
         x = keras.layers.Dense(4096, activation='relu')(x)
         x = keras.layers.Dense(1024, activation='relu')(x)
