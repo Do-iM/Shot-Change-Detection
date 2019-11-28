@@ -39,3 +39,16 @@ class concat2image:
         img.paste(imgs[0].crop((0, 0, 224, 224)), (0, 0))
         img.paste(imgs[1].crop((0, 0, 224, 224)), (224, 0))
         return img
+
+class concat4image:
+    length = 4
+    index = [0, 1, 2, 3]
+    change = 2
+    vgg = VGGModel.QuadVGG
+    def gen(imgs):
+        img = Image.new('RGB', (896, 224))
+        img.paste(imgs[0].crop((0, 0, 224, 224)), (0, 0))
+        img.paste(imgs[1].crop((0, 0, 224, 224)), (224, 0))
+        img.paste(imgs[2].crop((0, 0, 224, 224)), (448, 0))
+        img.paste(imgs[3].crop((0, 0, 224, 224)), (672, 0))
+        return img
