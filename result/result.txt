@@ -1,0 +1,28 @@
+Found 3200 images belonging to 4 classes.
+Found 800 images belonging to 4 classes.
+Epoch 1/5
+200/200 [==============================] - 459s 2s/step - loss: 0.5228 - acc: 0.8234 - val_loss: 0.3394 - val_acc: 0.8625
+Epoch 2/5
+200/200 [==============================] - 440s 2s/step - loss: 0.1463 - acc: 0.9447 - val_loss: 0.1865 - val_acc: 0.9375
+Epoch 3/5
+200/200 [==============================] - 440s 2s/step - loss: 0.0618 - acc: 0.9809 - val_loss: 0.2085 - val_acc: 0.9275
+Epoch 4/5
+200/200 [==============================] - 440s 2s/step - loss: 0.0277 - acc: 0.9916 - val_loss: 0.1914 - val_acc: 0.9387
+Epoch 5/5
+200/200 [==============================] - 440s 2s/step - loss: 0.0111 - acc: 0.9984 - val_loss: 0.2892 - val_acc: 0.9325
+
+              precision    recall  f1-score   support
+
+         0.0       0.96      0.92      0.94       200
+         1.0       0.99      0.99      0.99       200
+         2.0       0.94      0.83      0.88       200
+         3.0       0.86      0.99      0.92       200
+
+    accuracy                           0.93       800
+   macro avg       0.94      0.93      0.93       800
+weighted avg       0.94      0.93      0.93       800
+
+[[183   1   9   7]
+ [  0 199   0   1]
+ [  8   1 166  25]
+ [  0   0   2 198]]
