@@ -1,0 +1,201 @@
+0.jpg: Non=91
+1.jpg: Non=99
+10.jpg: Non=97
+100.jpg: Non=28 Fade=71
+101.jpg: Non=99
+102.jpg: Non=100
+103.jpg: Non=96
+104.jpg: Non=99
+105.jpg: Non=99
+106.jpg: Non=99
+107.jpg: Non=99
+108.jpg: Non=99
+109.jpg: Non=99
+11.jpg: Non=99
+110.jpg: Non=100
+111.jpg: Non=89 Fade=10
+112.jpg: Non=99
+113.jpg: Non=99
+114.jpg: Non=99
+115.jpg: Non=99
+116.jpg: Non=99
+117.jpg: Non=99
+118.jpg: Non=99
+119.jpg: Non=99
+12.jpg: Non=99
+120.jpg: Non=99
+121.jpg: Non=99
+122.jpg: Non=99
+123.jpg: Non=99
+124.jpg: Non=98
+125.jpg: Non=34 Dissolve=65
+126.jpg: Non=97
+127.jpg: Non=99
+128.jpg: Non=99
+129.jpg: Non=100
+13.jpg: Non=99
+130.jpg: Non=100
+131.jpg: Non=99
+132.jpg: Non=99
+133.jpg: Non=63 Fade=36
+134.jpg: Non=99
+135.jpg: Non=100
+136.jpg: Non=99
+137.jpg: Non=99
+138.jpg: Non=98
+139.jpg: Non=99
+14.jpg: Non=99
+140.jpg: Non=99
+141.jpg: Non=83 Dissolve=16
+142.jpg: Non=99
+143.jpg: Non=98
+144.jpg: Fade=99
+145.jpg: Non=100
+146.jpg: Non=97
+147.jpg: Non=99
+148.jpg: Non=99
+149.jpg: Non=93
+15.jpg: Non=99
+150.jpg: Non=99
+151.jpg: Non=97
+152.jpg: Non=100
+153.jpg: Non=99
+154.jpg: Non=99
+155.jpg: Non=99
+156.jpg: Non=100
+157.jpg: Non=82 Dissolve=17
+158.jpg: Non=100
+159.jpg: Non=97
+16.jpg: Fade=99
+160.jpg: Non=99
+161.jpg: Non=93
+162.jpg: Non=99
+163.jpg: Non=100
+164.jpg: Non=29 Cut=28 Dissolve=42
+165.jpg: Non=99
+166.jpg: Non=100
+167.jpg: Non=99
+168.jpg: Non=99
+169.jpg: Non=99
+17.jpg: Non=99
+170.jpg: Non=99
+171.jpg: Non=99
+172.jpg: Non=100
+173.jpg: Non=99
+174.jpg: Non=99
+175.jpg: Non=99
+176.jpg: Non=99
+177.jpg: Non=99
+178.jpg: Non=99
+179.jpg: Non=99
+18.jpg: Non=90
+180.jpg: Non=100
+181.jpg: Non=100
+182.jpg: Non=99
+183.jpg: Non=96
+184.jpg: Non=99
+185.jpg: Non=99
+186.jpg: Non=99
+187.jpg: Non=99
+188.jpg: Non=66 Cut=11 Dissolve=22
+189.jpg: Non=100
+19.jpg: Non=99
+190.jpg: Non=92
+191.jpg: Non=98
+192.jpg: Non=99
+193.jpg: Non=98
+194.jpg: Non=99
+195.jpg: Non=99
+196.jpg: Non=97
+197.jpg: Non=100
+198.jpg: Non=99
+199.jpg: Non=97
+2.jpg: Non=99
+20.jpg: Non=99
+21.jpg: Non=98
+22.jpg: Non=75 Dissolve=24
+23.jpg: Non=99
+24.jpg: Non=36 Dissolve=63
+25.jpg: Non=99
+26.jpg: Non=45 Dissolve=54
+27.jpg: Non=100
+28.jpg: Non=99
+29.jpg: Non=99
+3.jpg: Non=21 Fade=78
+30.jpg: Non=38 Dissolve=61
+31.jpg: Non=63 Dissolve=36
+32.jpg: Non=99
+33.jpg: Non=83 Dissolve=16
+34.jpg: Non=85 Dissolve=14
+35.jpg: Fade=95
+36.jpg: Non=99
+37.jpg: Non=100
+38.jpg: Non=100
+39.jpg: Non=99
+4.jpg: Non=99
+40.jpg: Non=99
+41.jpg: Non=96
+42.jpg: Non=99
+43.jpg: Non=99
+44.jpg: Non=99
+45.jpg: Non=99
+46.jpg: Non=100
+47.jpg: Non=99
+48.jpg: Non=99
+49.jpg: Non=99
+5.jpg: Non=99
+50.jpg: Non=99
+51.jpg: Non=99
+52.jpg: Non=99
+53.jpg: Non=95
+54.jpg: Non=10 Dissolve=89
+55.jpg: Dissolve=87
+56.jpg: Non=99
+57.jpg: Non=60 Fade=39
+58.jpg: Non=99
+59.jpg: Non=95
+6.jpg: Non=69 Dissolve=30
+60.jpg: Non=99
+61.jpg: Non=99
+62.jpg: Non=99
+63.jpg: Non=93
+64.jpg: Non=99
+65.jpg: Non=99
+66.jpg: Non=99
+67.jpg: Non=100
+68.jpg: Non=99
+69.jpg: Non=52 Fade=47
+7.jpg: Non=95
+70.jpg: Dissolve=96
+71.jpg: Non=97
+72.jpg: Non=99
+73.jpg: Non=99
+74.jpg: Non=99
+75.jpg: Non=99
+76.jpg: Non=99
+77.jpg: Non=99
+78.jpg: Non=99
+79.jpg: Non=99
+8.jpg: Non=99
+80.jpg: Non=99
+81.jpg: Non=91
+82.jpg: Non=48 Fade=51
+83.jpg: Non=99
+84.jpg: Fade=93
+85.jpg: Non=28 Dissolve=71
+86.jpg: Non=93
+87.jpg: Non=99
+88.jpg: Non=99
+89.jpg: Non=69 Dissolve=30
+9.jpg: Non=99
+90.jpg: Non=99
+91.jpg: Non=99
+92.jpg: Cut=65 Dissolve=31
+93.jpg: Non=99
+94.jpg: Non=100
+95.jpg: Non=99
+96.jpg: Non=99
+97.jpg: Non=99
+98.jpg: Non=99
+99.jpg: Non=99
+[183, 1, 9, 7]

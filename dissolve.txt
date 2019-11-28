@@ -1,0 +1,201 @@
+0.jpg: Fade=99
+1.jpg: Dissolve=99
+10.jpg: Dissolve=99
+100.jpg: Dissolve=99
+101.jpg: Dissolve=99
+102.jpg: Dissolve=99
+103.jpg: Fade=99
+104.jpg: Non=94
+105.jpg: Dissolve=99
+106.jpg: Dissolve=99
+107.jpg: Dissolve=99
+108.jpg: Dissolve=99
+109.jpg: Non=33 Dissolve=65
+11.jpg: Dissolve=99
+110.jpg: Dissolve=99
+111.jpg: Dissolve=98
+112.jpg: Dissolve=38 Fade=60
+113.jpg: Dissolve=99
+114.jpg: Dissolve=99
+115.jpg: Dissolve=99
+116.jpg: Non=97
+117.jpg: Dissolve=99
+118.jpg: Dissolve=99
+119.jpg: Dissolve=95
+12.jpg: Non=24 Fade=73
+120.jpg: Dissolve=98
+121.jpg: Dissolve=99
+122.jpg: Dissolve=99
+123.jpg: Dissolve=99
+124.jpg: Dissolve=99
+125.jpg: Non=73 Dissolve=18
+126.jpg: Dissolve=97
+127.jpg: Dissolve=60 Fade=38
+128.jpg: Dissolve=99
+129.jpg: Dissolve=99
+13.jpg: Dissolve=99
+130.jpg: Dissolve=90
+131.jpg: Dissolve=99
+132.jpg: Dissolve=99
+133.jpg: Dissolve=34 Fade=61
+134.jpg: Dissolve=99
+135.jpg: Fade=97
+136.jpg: Fade=99
+137.jpg: Dissolve=99
+138.jpg: Dissolve=99
+139.jpg: Dissolve=29 Fade=70
+14.jpg: Dissolve=99
+140.jpg: Dissolve=99
+141.jpg: Dissolve=99
+142.jpg: Dissolve=99
+143.jpg: Dissolve=98
+144.jpg: Dissolve=99
+145.jpg: Dissolve=99
+146.jpg: Dissolve=99
+147.jpg: Non=38 Dissolve=60
+148.jpg: Dissolve=99
+149.jpg: Fade=99
+15.jpg: Dissolve=99
+150.jpg: Dissolve=98
+151.jpg: Dissolve=99
+152.jpg: Dissolve=94
+153.jpg: Dissolve=95
+154.jpg: Dissolve=98
+155.jpg: Dissolve=99
+156.jpg: Non=28 Dissolve=36 Fade=34
+157.jpg: Dissolve=91
+158.jpg: Dissolve=99
+159.jpg: Fade=99
+16.jpg: Dissolve=99
+160.jpg: Dissolve=99
+161.jpg: Dissolve=99
+162.jpg: Dissolve=99
+163.jpg: Dissolve=99
+164.jpg: Dissolve=98
+165.jpg: Dissolve=99
+166.jpg: Dissolve=98
+167.jpg: Dissolve=33 Fade=65
+168.jpg: Non=61 Dissolve=38
+169.jpg: Dissolve=97
+17.jpg: Fade=99
+170.jpg: Dissolve=92
+171.jpg: Dissolve=91
+172.jpg: Dissolve=19 Fade=80
+173.jpg: Dissolve=99
+174.jpg: Dissolve=99
+175.jpg: Dissolve=99
+176.jpg: Dissolve=99
+177.jpg: Dissolve=99
+178.jpg: Dissolve=93
+179.jpg: Dissolve=99
+18.jpg: Dissolve=98
+180.jpg: Dissolve=99
+181.jpg: Dissolve=99
+182.jpg: Dissolve=99
+183.jpg: Dissolve=99
+184.jpg: Dissolve=99
+185.jpg: Non=42 Dissolve=56
+186.jpg: Non=21 Dissolve=77
+187.jpg: Dissolve=99
+188.jpg: Dissolve=99
+189.jpg: Dissolve=99
+19.jpg: Dissolve=99
+190.jpg: Dissolve=73 Fade=26
+191.jpg: Dissolve=99
+192.jpg: Fade=99
+193.jpg: Non=25 Fade=74
+194.jpg: Dissolve=99
+195.jpg: Dissolve=99
+196.jpg: Dissolve=99
+197.jpg: Non=97
+198.jpg: Dissolve=99
+199.jpg: Dissolve=17 Fade=82
+2.jpg: Dissolve=99
+20.jpg: Dissolve=99
+21.jpg: Dissolve=99
+22.jpg: Cut=93
+23.jpg: Dissolve=98
+24.jpg: Dissolve=98
+25.jpg: Dissolve=99
+26.jpg: Dissolve=99
+27.jpg: Non=67 Dissolve=32
+28.jpg: Dissolve=99
+29.jpg: Non=17 Dissolve=28 Fade=53
+3.jpg: Dissolve=99
+30.jpg: Non=88
+31.jpg: Dissolve=99
+32.jpg: Dissolve=99
+33.jpg: Dissolve=99
+34.jpg: Dissolve=99
+35.jpg: Dissolve=99
+36.jpg: Dissolve=99
+37.jpg: Dissolve=99
+38.jpg: Dissolve=97
+39.jpg: Dissolve=85 Fade=14
+4.jpg: Dissolve=99
+40.jpg: Dissolve=98
+41.jpg: Cut=11 Dissolve=69 Fade=16
+42.jpg: Dissolve=99
+43.jpg: Dissolve=99
+44.jpg: Dissolve=76 Fade=13
+45.jpg: Dissolve=99
+46.jpg: Fade=99
+47.jpg: Non=12 Dissolve=87
+48.jpg: Dissolve=99
+49.jpg: Dissolve=99
+5.jpg: Non=30 Dissolve=33 Fade=35
+50.jpg: Dissolve=98
+51.jpg: Fade=99
+52.jpg: Dissolve=99
+53.jpg: Dissolve=99
+54.jpg: Dissolve=99
+55.jpg: Dissolve=99
+56.jpg: Dissolve=98
+57.jpg: Fade=100
+58.jpg: Dissolve=22 Fade=76
+59.jpg: Dissolve=99
+6.jpg: Non=11 Dissolve=84
+60.jpg: Dissolve=96
+61.jpg: Dissolve=99
+62.jpg: Dissolve=99
+63.jpg: Non=69 Dissolve=30
+64.jpg: Dissolve=99
+65.jpg: Dissolve=99
+66.jpg: Dissolve=99
+67.jpg: Dissolve=99
+68.jpg: Dissolve=99
+69.jpg: Dissolve=99
+7.jpg: Non=36 Dissolve=63
+70.jpg: Dissolve=21 Fade=72
+71.jpg: Dissolve=93
+72.jpg: Dissolve=99
+73.jpg: Dissolve=99
+74.jpg: Dissolve=99
+75.jpg: Dissolve=99
+76.jpg: Dissolve=99
+77.jpg: Dissolve=99
+78.jpg: Dissolve=98
+79.jpg: Dissolve=98
+8.jpg: Non=39 Dissolve=60
+80.jpg: Dissolve=98
+81.jpg: Dissolve=99
+82.jpg: Dissolve=98
+83.jpg: Dissolve=99
+84.jpg: Dissolve=95
+85.jpg: Dissolve=99
+86.jpg: Dissolve=99
+87.jpg: Fade=99
+88.jpg: Non=19 Dissolve=78
+89.jpg: Non=14 Dissolve=85
+9.jpg: Dissolve=99
+90.jpg: Dissolve=99
+91.jpg: Dissolve=17 Fade=82
+92.jpg: Dissolve=99
+93.jpg: Dissolve=98
+94.jpg: Non=20 Dissolve=79
+95.jpg: Dissolve=99
+96.jpg: Dissolve=99
+97.jpg: Dissolve=99
+98.jpg: Dissolve=99
+99.jpg: Dissolve=99
+[8, 1, 166, 25]
