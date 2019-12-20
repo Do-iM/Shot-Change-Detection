@@ -6,9 +6,9 @@ import os
 import VGGModel
 
 class mix2image:
-    length = 6
-    index = [0, 5]
-    change = 3
+    length = 2
+    index = [0, 1]
+    change = 1
     vgg = VGGModel.SingleVGG
     def gen(imgs):
         img = Image.new('RGB', (224, 224))

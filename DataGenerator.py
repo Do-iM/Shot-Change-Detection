@@ -16,7 +16,7 @@ def frame_to_input(gen_f, frame_dir, input_dir):
             img_set.append(img)
         gen_f.gen(img_set).save(os.path.join(input_dir, frames[i]))
 
-def generate(gen_f, set_size, base_dir, out_dir, dissolve_level = [10, 15], fade_level = [10, 15]):
+def generate(gen_f, set_size, base_dir, out_dir, dissolve_level = [10, 10], fade_level = [10, 10]):
     os.mkdir(out_dir)
     
     os.mkdir(os.path.join(out_dir, "0_Non"))
@@ -111,7 +111,8 @@ def generate(gen_f, set_size, base_dir, out_dir, dissolve_level = [10, 15], fade
         img_index = random.randrange(0, len(imgs) - (gen_f.length - 1))
         img_set = []
         levels = random.randrange(fade_level[0], fade_level[1] + 1)
-        bw = Image.new("RGB", image_size, (255, 255, 255) if random.random() < 0.5 else (0, 0, 0))
+        #bw = Image.new("RGB", image_size, (255, 255, 255) if random.random() < 0.5 else (0, 0, 0))
+        bw = Image.new("RGB", image_size, (0, 0, 0))
         bw_switch = random.random() < 0.5
         for f_index in gen_f.index:
             img_a = Image.open(os.path.join(base_dir, basedir[dir_index], imgs[img_index + f_index]))

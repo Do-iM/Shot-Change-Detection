@@ -3,6 +3,7 @@
 
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 
 keras = None
 gen_f = None
@@ -27,9 +28,7 @@ def compile_model(model):
 def get_data_gen(batch_size):
     return (gen_f.vgg.generator("train", batch_size), gen_f.vgg.generator("valid", batch_size))
 
-def view_history(history):
-    import matplotlib.pyplot as plt
-
+def view_history(history, epochs):
     acc = history.history['acc']
     val_acc = history.history['val_acc']
 
@@ -62,8 +61,8 @@ def train_model(model, batch_size = 16, train_steps = 100, valid_steps = 25, epo
         validation_steps=valid_steps if valid_steps > 0 else None
     )
     if view:
-        view_history(history)
-    return
+        view_history(history, epochs)
+    return history
 
 def check_validation(model, data_gen):
     random_valid = next(data_gen)
@@ -101,3 +100,12 @@ def detection(model, test_dir, threshold = 0.1):
         print(info)
         
     print(total)
+    
+def single_detection(model, image_path):
+    img = keras.preprocessing.image.load_img(image_path)
+    arr = keras.preprocessing.image.img_to_array(img) / 255
+    arr = np.expand_dims(arr, axis=0)
+    arr = gen_f.vgg.image_array_to_input(arr)
+    pred = model.predict(arr)[0]
+    return pred
+    
